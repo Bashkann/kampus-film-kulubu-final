@@ -1,35 +1,57 @@
 export default function TVCard({ show, dispatch }) {
   return (
-    <div className="card mb-4">
+    <div className="card mb-4 shadow-sm">
+      {/* Görsel */}
       <img
         src={show.image?.medium || "https://placehold.co/210x295?text=Poster+Yok"}
         className="card-img-top"
         alt={show.name}
       />
-      <div className="card-body">
-        <h5 className="card-title">{show.name}</h5>
 
-        <div className="mb-2">
-          <span className="badge bg-warning text-dark me-2">⭐ {show.rating?.average || "N/A"}</span>
-          <span className="badge bg-info text-dark me-2">{show.language || "Unknown"}</span>
-          {show.genres?.slice(0, 2).map((genre, i) => (
-            <span key={i} className="badge bg-light text-dark me-1">
-              {genre}
-            </span>
-          ))}
+      <div className="card-body">
+        {/* Başlık */}
+        <h5 className="card-title fw-bold">{show.name}</h5>
+
+        {/* IMDb, Dil, Türler */}
+        <div className="mb-2 d-flex flex-wrap align-items-center gap-1">
+          {/* IMDb Puanı */}
+          <span className="badge bg-warning text-dark">
+            ⭐ {show.rating?.average || "N/A"}
+          </span>
+
+          {/* Dil */}
+          <span className="badge bg-info text-dark">
+            🌐 {show.language || "Unknown"}
+          </span>
+
+          {/* Türler */}
+          {show.genres && show.genres.length > 0 ? (
+            show.genres.map((genre, i) => (
+              <span key={i} className="badge bg-light text-dark">
+                {genre}
+              </span>
+            ))
+          ) : (
+            <span className="badge bg-secondary text-light">Tür Bilgisi Yok</span>
+          )}
         </div>
 
+        {/* Açıklama */}
         <p
           className="card-text text-muted"
           style={{ fontSize: "0.9rem", height: "60px", overflow: "hidden" }}
-          dangerouslySetInnerHTML={{ __html: show.summary || "No description available." }}
+          dangerouslySetInnerHTML={{
+            __html: show.summary || "No description available.",
+          }}
         ></p>
 
-        <div className="d-flex justify-content-between">
+        {/* Butonlar */}
+        <div className="d-flex justify-content-between mt-3">
           <button className="btn btn-outline-primary btn-sm">Detay</button>
+
           <button
             className="btn btn-warning btn-sm"
-            onClick={() => dispatch({ type: "ADD_WATCHLIST", payload: show })}
+            onClick={() => dispatch({ type: "ADD_TO_WATCHLIST", payload: show })}
           >
             Gösterime Ekle
           </button>
