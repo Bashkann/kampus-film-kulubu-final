@@ -1,7 +1,5 @@
+# 🎬 Kampüs Film Kulübü 
 
-# 🎬 Kampüs Film Kulübü 2
-
-Bu proje, **Süleyman Demirel Üniversitesi Film Kulübü** için hazırlanmıştır.  
 Kullanıcılar, TVMaze API üzerinden dizileri arayabilir, filtreleyebilir ve gösterime girecek dizi listesi oluşturabilir.
 
 ---
@@ -18,24 +16,18 @@ Kullanıcılar, TVMaze API üzerinden dizileri arayabilir, filtreleyebilir ve g�
 
 ---
 
-## 🧠 Kullanılan Teknolojiler
+## 🌍 Canlı Proje
 
-- React (Vite)
-- Axios
-- Bootstrap 5
-- TVMaze Public API
-
----
-🌍 Canlı Proje
-🔗 https://kampus-film-kulubu2.vercel.app
+🔗 **[Kampüs Film Kulübü (Final)](https://kampus-film-kulubu-final.vercel.app)**
 
 ---
 
 ## 📂 Proje Kurulumu 
 
-Projeyi yerel ortamında çalıştırmak istersen:
+Projeyi yerelde çalıştırmak için:
+
 ```bash
-git clone https://github.com/Bashkann/kampus-film-kulubu2.git
-cd kampus-film-kulubu2
+git clone https://github.com/Bashkann/kampus-film-kulubu-final.git
+cd kampus-film-kulubu-final
 npm install
 npm run dev
