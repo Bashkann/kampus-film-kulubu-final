@@ -1,16 +1,41 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎬 Kampüs Film Kulübü 2
 
-Currently, two official plugins are available:
+Bu proje, **Süleyman Demirel Üniversitesi Film Kulübü** için hazırlanmıştır.  
+Kullanıcılar, TVMaze API üzerinden dizileri arayabilir, filtreleyebilir ve gösterime girecek dizi listesi oluşturabilir.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Özellikler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- TVMaze API ile gerçek veri çekme (Axios)
+- Arama kutusu (SearchBox)
+- Tür, dil ve puan filtreleme
+- Sayfalama (Pagination)
+- Gösterime ekleme/silme listesi (Watchlist)
+- `useReducer` kullanımı ile state yönetimi
+- Bootstrap ile modern arayüz
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧠 Kullanılan Teknolojiler
+
+- React (Vite)
+- Axios
+- Bootstrap 5
+- TVMaze Public API
+
+---
+🌍 Canlı Proje
+🔗 https://kampus-film-kulubu2.vercel.app
+
+---
+
+## 📂 Proje Kurulumu 
+
+Projeyi yerel ortamında çalıştırmak istersen:
+```bash
+git clone https://github.com/Bashkann/kampus-film-kulubu2.git
+cd kampus-film-kulubu2
+npm install
+npm run dev
